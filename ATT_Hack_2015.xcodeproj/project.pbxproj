@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9339459E1BBF4EA5004D823C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339459D1BBF4EA5004D823C /* main.m */; };
+		933945A11BBF4EA5004D823C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945A01BBF4EA5004D823C /* AppDelegate.m */; };
+		933945A41BBF4EA5004D823C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945A31BBF4EA5004D823C /* FirstViewController.m */; };
+		933945A71BBF4EA5004D823C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945A61BBF4EA5004D823C /* SecondViewController.m */; };
+		933945AA1BBF4EA5004D823C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933945A81BBF4EA5004D823C /* Main.storyboard */; };
+		933945AC1BBF4EA5004D823C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933945AB1BBF4EA5004D823C /* Assets.xcassets */; };
+		933945AF1BBF4EA5004D823C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933945AD1BBF4EA5004D823C /* LaunchScreen.storyboard */; };
+		933945BA1BBF4EA5004D823C /* ATT_Hack_2015Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945B91BBF4EA5004D823C /* ATT_Hack_2015Tests.m */; };
+		933945C51BBF4EA5004D823C /* ATT_Hack_2015UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945C41BBF4EA5004D823C /* ATT_Hack_2015UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		933945B61BBF4EA5004D823C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 933945911BBF4EA4004D823C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 933945981BBF4EA5004D823C;
+			remoteInfo = ATT_Hack_2015;
+		};
+		933945C11BBF4EA5004D823C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 933945911BBF4EA4004D823C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 933945981BBF4EA5004D823C;
+			remoteInfo = ATT_Hack_2015;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		933945991BBF4EA5004D823C /* ATT_Hack_2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATT_Hack_2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9339459D1BBF4EA5004D823C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9339459F1BBF4EA5004D823C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		933945A01BBF4EA5004D823C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		933945A21BBF4EA5004D823C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		933945A31BBF4EA5004D823C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		933945A51BBF4EA5004D823C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		933945A61BBF4EA5004D823C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		933945A91BBF4EA5004D823C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		933945AB1BBF4EA5004D823C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		933945AE1BBF4EA5004D823C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		933945B01BBF4EA5004D823C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		933945B51BBF4EA5004D823C /* ATT_Hack_2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATT_Hack_2015Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		933945B91BBF4EA5004D823C /* ATT_Hack_2015Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATT_Hack_2015Tests.m; sourceTree = "<group>"; };
+		933945BB1BBF4EA5004D823C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		933945C01BBF4EA5004D823C /* ATT_Hack_2015UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATT_Hack_2015UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		933945C41BBF4EA5004D823C /* ATT_Hack_2015UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATT_Hack_2015UITests.m; sourceTree = "<group>"; };
+		933945C61BBF4EA5004D823C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		933945961BBF4EA5004D823C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933945B21BBF4EA5004D823C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933945BD1BBF4EA5004D823C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		933945901BBF4EA4004D823C = {
+			isa = PBXGroup;
+			children = (
+				9339459B1BBF4EA5004D823C /* ATT_Hack_2015 */,
+				933945B81BBF4EA5004D823C /* ATT_Hack_2015Tests */,
+				933945C31BBF4EA5004D823C /* ATT_Hack_2015UITests */,
+				9339459A1BBF4EA5004D823C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9339459A1BBF4EA5004D823C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				933945991BBF4EA5004D823C /* ATT_Hack_2015.app */,
+				933945B51BBF4EA5004D823C /* ATT_Hack_2015Tests.xctest */,
+				933945C01BBF4EA5004D823C /* ATT_Hack_2015UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9339459B1BBF4EA5004D823C /* ATT_Hack_2015 */ = {
+			isa = PBXGroup;
+			children = (
+				9339459F1BBF4EA5004D823C /* AppDelegate.h */,
+				933945A01BBF4EA5004D823C /* AppDelegate.m */,
+				933945A21BBF4EA5004D823C /* FirstViewController.h */,
+				933945A31BBF4EA5004D823C /* FirstViewController.m */,
+				933945A51BBF4EA5004D823C /* SecondViewController.h */,
+				933945A61BBF4EA5004D823C /* SecondViewController.m */,
+				933945A81BBF4EA5004D823C /* Main.storyboard */,
+				933945AB1BBF4EA5004D823C /* Assets.xcassets */,
+				933945AD1BBF4EA5004D823C /* LaunchScreen.storyboard */,
+				933945B01BBF4EA5004D823C /* Info.plist */,
+				9339459C1BBF4EA5004D823C /* Supporting Files */,
+			);
+			path = ATT_Hack_2015;
+			sourceTree = "<group>";
+		};
+		9339459C1BBF4EA5004D823C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9339459D1BBF4EA5004D823C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		933945B81BBF4EA5004D823C /* ATT_Hack_2015Tests */ = {
+			isa = PBXGroup;
+			children = (
+				933945B91BBF4EA5004D823C /* ATT_Hack_2015Tests.m */,
+				933945BB1BBF4EA5004D823C /* Info.plist */,
+			);
+			path = ATT_Hack_2015Tests;
+			sourceTree = "<group>";
+		};
+		933945C31BBF4EA5004D823C /* ATT_Hack_2015UITests */ = {
+			isa = PBXGroup;
+			children = (
+				933945C41BBF4EA5004D823C /* ATT_Hack_2015UITests.m */,
+				933945C61BBF4EA5004D823C /* Info.plist */,
+			);
+			path = ATT_Hack_2015UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		933945981BBF4EA5004D823C /* ATT_Hack_2015 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 933945C91BBF4EA5004D823C /* Build configuration list for PBXNativeTarget "ATT_Hack_2015" */;
+			buildPhases = (
+				933945951BBF4EA5004D823C /* Sources */,
+				933945961BBF4EA5004D823C /* Frameworks */,
+				933945971BBF4EA5004D823C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATT_Hack_2015;
+			productName = ATT_Hack_2015;
+			productReference = 933945991BBF4EA5004D823C /* ATT_Hack_2015.app */;
+			productType = "com.apple.product-type.application";
+		};
+		933945B41BBF4EA5004D823C /* ATT_Hack_2015Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 933945CC1BBF4EA5004D823C /* Build configuration list for PBXNativeTarget "ATT_Hack_2015Tests" */;
+			buildPhases = (
+				933945B11BBF4EA5004D823C /* Sources */,
+				933945B21BBF4EA5004D823C /* Frameworks */,
+				933945B31BBF4EA5004D823C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				933945B71BBF4EA5004D823C /* PBXTargetDependency */,
+			);
+			name = ATT_Hack_2015Tests;
+			productName = ATT_Hack_2015Tests;
+			productReference = 933945B51BBF4EA5004D823C /* ATT_Hack_2015Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		933945BF1BBF4EA5004D823C /* ATT_Hack_2015UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 933945CF1BBF4EA5004D823C /* Build configuration list for PBXNativeTarget "ATT_Hack_2015UITests" */;
+			buildPhases = (
+				933945BC1BBF4EA5004D823C /* Sources */,
+				933945BD1BBF4EA5004D823C /* Frameworks */,
+				933945BE1BBF4EA5004D823C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				933945C21BBF4EA5004D823C /* PBXTargetDependency */,
+			);
+			name = ATT_Hack_2015UITests;
+			productName = ATT_Hack_2015UITests;
+			productReference = 933945C01BBF4EA5004D823C /* ATT_Hack_2015UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		933945911BBF4EA4004D823C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Aaron Crawfis";
+				TargetAttributes = {
+					933945981BBF4EA5004D823C = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					933945B41BBF4EA5004D823C = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 933945981BBF4EA5004D823C;
+					};
+					933945BF1BBF4EA5004D823C = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 933945981BBF4EA5004D823C;
+					};
+				};
+			};
+			buildConfigurationList = 933945941BBF4EA4004D823C /* Build configuration list for PBXProject "ATT_Hack_2015" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 933945901BBF4EA4004D823C;
+			productRefGroup = 9339459A1BBF4EA5004D823C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				933945981BBF4EA5004D823C /* ATT_Hack_2015 */,
+				933945B41BBF4EA5004D823C /* ATT_Hack_2015Tests */,
+				933945BF1BBF4EA5004D823C /* ATT_Hack_2015UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		933945971BBF4EA5004D823C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933945AF1BBF4EA5004D823C /* LaunchScreen.storyboard in Resources */,
+				933945AC1BBF4EA5004D823C /* Assets.xcassets in Resources */,
+				933945AA1BBF4EA5004D823C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933945B31BBF4EA5004D823C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933945BE1BBF4EA5004D823C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		933945951BBF4EA5004D823C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933945A71BBF4EA5004D823C /* SecondViewController.m in Sources */,
+				933945A11BBF4EA5004D823C /* AppDelegate.m in Sources */,
+				933945A41BBF4EA5004D823C /* FirstViewController.m in Sources */,
+				9339459E1BBF4EA5004D823C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933945B11BBF4EA5004D823C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933945BA1BBF4EA5004D823C /* ATT_Hack_2015Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933945BC1BBF4EA5004D823C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933945C51BBF4EA5004D823C /* ATT_Hack_2015UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		933945B71BBF4EA5004D823C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 933945981BBF4EA5004D823C /* ATT_Hack_2015 */;
+			targetProxy = 933945B61BBF4EA5004D823C /* PBXContainerItemProxy */;
+		};
+		933945C21BBF4EA5004D823C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 933945981BBF4EA5004D823C /* ATT_Hack_2015 */;
+			targetProxy = 933945C11BBF4EA5004D823C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		933945A81BBF4EA5004D823C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				933945A91BBF4EA5004D823C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		933945AD1BBF4EA5004D823C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				933945AE1BBF4EA5004D823C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		933945C71BBF4EA5004D823C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		933945C81BBF4EA5004D823C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		933945CA1BBF4EA5004D823C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ATT_Hack_2015/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.Aaron.ATT-Hack-2015";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		933945CB1BBF4EA5004D823C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ATT_Hack_2015/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.Aaron.ATT-Hack-2015";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		933945CD1BBF4EA5004D823C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ATT_Hack_2015Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.Aaron.ATT-Hack-2015Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATT_Hack_2015.app/ATT_Hack_2015";
+			};
+			name = Debug;
+		};
+		933945CE1BBF4EA5004D823C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ATT_Hack_2015Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.Aaron.ATT-Hack-2015Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATT_Hack_2015.app/ATT_Hack_2015";
+			};
+			name = Release;
+		};
+		933945D01BBF4EA5004D823C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ATT_Hack_2015UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.Aaron.ATT-Hack-2015UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ATT_Hack_2015;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		933945D11BBF4EA5004D823C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ATT_Hack_2015UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.Aaron.ATT-Hack-2015UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ATT_Hack_2015;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		933945941BBF4EA4004D823C /* Build configuration list for PBXProject "ATT_Hack_2015" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				933945C71BBF4EA5004D823C /* Debug */,
+				933945C81BBF4EA5004D823C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		933945C91BBF4EA5004D823C /* Build configuration list for PBXNativeTarget "ATT_Hack_2015" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				933945CA1BBF4EA5004D823C /* Debug */,
+				933945CB1BBF4EA5004D823C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		933945CC1BBF4EA5004D823C /* Build configuration list for PBXNativeTarget "ATT_Hack_2015Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				933945CD1BBF4EA5004D823C /* Debug */,
+				933945CE1BBF4EA5004D823C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		933945CF1BBF4EA5004D823C /* Build configuration list for PBXNativeTarget "ATT_Hack_2015UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				933945D01BBF4EA5004D823C /* Debug */,
+				933945D11BBF4EA5004D823C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 933945911BBF4EA4004D823C /* Project object */;
+}
