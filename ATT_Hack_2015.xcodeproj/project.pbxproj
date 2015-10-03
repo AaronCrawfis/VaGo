@@ -9,13 +9,28 @@
 /* Begin PBXBuildFile section */
 		9339459E1BBF4EA5004D823C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339459D1BBF4EA5004D823C /* main.m */; };
 		933945A11BBF4EA5004D823C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945A01BBF4EA5004D823C /* AppDelegate.m */; };
-		933945A41BBF4EA5004D823C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945A31BBF4EA5004D823C /* FirstViewController.m */; };
-		933945A71BBF4EA5004D823C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945A61BBF4EA5004D823C /* SecondViewController.m */; };
 		933945AA1BBF4EA5004D823C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933945A81BBF4EA5004D823C /* Main.storyboard */; };
 		933945AC1BBF4EA5004D823C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933945AB1BBF4EA5004D823C /* Assets.xcassets */; };
 		933945AF1BBF4EA5004D823C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933945AD1BBF4EA5004D823C /* LaunchScreen.storyboard */; };
 		933945BA1BBF4EA5004D823C /* ATT_Hack_2015Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945B91BBF4EA5004D823C /* ATT_Hack_2015Tests.m */; };
 		933945C51BBF4EA5004D823C /* ATT_Hack_2015UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945C41BBF4EA5004D823C /* ATT_Hack_2015UITests.m */; };
+		933945D91BBF4EDA004D823C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945D51BBF4EDA004D823C /* Constants.m */; settings = {ASSET_TAGS = (); }; };
+		933945E11BBF53DB004D823C /* VC_Lights.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945E01BBF53DB004D823C /* VC_Lights.m */; settings = {ASSET_TAGS = (); }; };
+		933945E41BBF53FC004D823C /* VC_Doors.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945E31BBF53FC004D823C /* VC_Doors.m */; settings = {ASSET_TAGS = (); }; };
+		933945E71BBF5438004D823C /* VC_Thermostat.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945E61BBF5438004D823C /* VC_Thermostat.m */; settings = {ASSET_TAGS = (); }; };
+		933945EA1BBF5585004D823C /* VC_Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945E91BBF5585004D823C /* VC_Home.m */; settings = {ASSET_TAGS = (); }; };
+		933945ED1BBF5591004D823C /* VC_Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945EC1BBF5590004D823C /* VC_Login.m */; settings = {ASSET_TAGS = (); }; };
+		933945F81BBF6E58004D823C /* DLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945EF1BBF6E58004D823C /* DLClient.m */; settings = {ASSET_TAGS = (); }; };
+		933945F91BBF6E58004D823C /* DLDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945F11BBF6E58004D823C /* DLDevice.m */; settings = {ASSET_TAGS = (); }; };
+		933945FA1BBF6E58004D823C /* DLeServiceConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945F31BBF6E58004D823C /* DLeServiceConnection.m */; settings = {ASSET_TAGS = (); }; };
+		933945FB1BBF6E58004D823C /* JSONHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945F51BBF6E58004D823C /* JSONHelpers.m */; settings = {ASSET_TAGS = (); }; };
+		933945FC1BBF6E58004D823C /* URLHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 933945F71BBF6E58004D823C /* URLHelpers.m */; settings = {ASSET_TAGS = (); }; };
+		933946001BBF8536004D823C /* Home_Back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 933945FF1BBF8536004D823C /* Home_Back.jpg */; settings = {ASSET_TAGS = (); }; };
+		933946031BBF86A6004D823C /* Icon_Food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 933946021BBF86A6004D823C /* Icon_Food.jpg */; settings = {ASSET_TAGS = (); }; };
+		933946071BBF8A90004D823C /* Icon_Contact.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 933946041BBF8A90004D823C /* Icon_Contact.jpg */; settings = {ASSET_TAGS = (); }; };
+		933946081BBF8A90004D823C /* Icon_Photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 933946051BBF8A90004D823C /* Icon_Photo.jpg */; settings = {ASSET_TAGS = (); }; };
+		933946091BBF8A90004D823C /* Icon_Signout.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 933946061BBF8A90004D823C /* Icon_Signout.jpg */; settings = {ASSET_TAGS = (); }; };
+		9339460B1BBF8DF0004D823C /* app-bits_free_tabbar_icons in Resources */ = {isa = PBXBuildFile; fileRef = 9339460A1BBF8DF0004D823C /* app-bits_free_tabbar_icons */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +55,6 @@
 		9339459D1BBF4EA5004D823C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9339459F1BBF4EA5004D823C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		933945A01BBF4EA5004D823C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		933945A21BBF4EA5004D823C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		933945A31BBF4EA5004D823C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		933945A51BBF4EA5004D823C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		933945A61BBF4EA5004D823C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		933945A91BBF4EA5004D823C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		933945AB1BBF4EA5004D823C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		933945AE1BBF4EA5004D823C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +65,34 @@
 		933945C01BBF4EA5004D823C /* ATT_Hack_2015UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATT_Hack_2015UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		933945C41BBF4EA5004D823C /* ATT_Hack_2015UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATT_Hack_2015UITests.m; sourceTree = "<group>"; };
 		933945C61BBF4EA5004D823C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		933945D41BBF4EDA004D823C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
+		933945D51BBF4EDA004D823C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = ../Constants.m; sourceTree = "<group>"; };
+		933945DF1BBF53DB004D823C /* VC_Lights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VC_Lights.h; sourceTree = "<group>"; };
+		933945E01BBF53DB004D823C /* VC_Lights.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VC_Lights.m; sourceTree = "<group>"; };
+		933945E21BBF53FC004D823C /* VC_Doors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VC_Doors.h; sourceTree = "<group>"; };
+		933945E31BBF53FC004D823C /* VC_Doors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VC_Doors.m; sourceTree = "<group>"; };
+		933945E51BBF5438004D823C /* VC_Thermostat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VC_Thermostat.h; sourceTree = "<group>"; };
+		933945E61BBF5438004D823C /* VC_Thermostat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VC_Thermostat.m; sourceTree = "<group>"; };
+		933945E81BBF5585004D823C /* VC_Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VC_Home.h; sourceTree = "<group>"; };
+		933945E91BBF5585004D823C /* VC_Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VC_Home.m; sourceTree = "<group>"; };
+		933945EB1BBF5590004D823C /* VC_Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VC_Login.h; sourceTree = "<group>"; };
+		933945EC1BBF5590004D823C /* VC_Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VC_Login.m; sourceTree = "<group>"; };
+		933945EE1BBF6E58004D823C /* DLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLClient.h; path = ../DLClient.h; sourceTree = "<group>"; };
+		933945EF1BBF6E58004D823C /* DLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLClient.m; path = ../DLClient.m; sourceTree = "<group>"; };
+		933945F01BBF6E58004D823C /* DLDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLDevice.h; path = ../DLDevice.h; sourceTree = "<group>"; };
+		933945F11BBF6E58004D823C /* DLDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLDevice.m; path = ../DLDevice.m; sourceTree = "<group>"; };
+		933945F21BBF6E58004D823C /* DLeServiceConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLeServiceConnection.h; path = ../DLeServiceConnection.h; sourceTree = "<group>"; };
+		933945F31BBF6E58004D823C /* DLeServiceConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLeServiceConnection.m; path = ../DLeServiceConnection.m; sourceTree = "<group>"; };
+		933945F41BBF6E58004D823C /* JSONHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONHelpers.h; path = ../JSONHelpers.h; sourceTree = "<group>"; };
+		933945F51BBF6E58004D823C /* JSONHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONHelpers.m; path = ../JSONHelpers.m; sourceTree = "<group>"; };
+		933945F61BBF6E58004D823C /* URLHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLHelpers.h; path = ../URLHelpers.h; sourceTree = "<group>"; };
+		933945F71BBF6E58004D823C /* URLHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLHelpers.m; path = ../URLHelpers.m; sourceTree = "<group>"; };
+		933945FF1BBF8536004D823C /* Home_Back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Home_Back.jpg; sourceTree = "<group>"; };
+		933946021BBF86A6004D823C /* Icon_Food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon_Food.jpg; sourceTree = "<group>"; };
+		933946041BBF8A90004D823C /* Icon_Contact.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon_Contact.jpg; sourceTree = "<group>"; };
+		933946051BBF8A90004D823C /* Icon_Photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon_Photo.jpg; sourceTree = "<group>"; };
+		933946061BBF8A90004D823C /* Icon_Signout.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon_Signout.jpg; sourceTree = "<group>"; };
+		9339460A1BBF8DF0004D823C /* app-bits_free_tabbar_icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "app-bits_free_tabbar_icons"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +123,7 @@
 		933945901BBF4EA4004D823C = {
 			isa = PBXGroup;
 			children = (
+				933946011BBF853B004D823C /* Artwork */,
 				9339459B1BBF4EA5004D823C /* ATT_Hack_2015 */,
 				933945B81BBF4EA5004D823C /* ATT_Hack_2015Tests */,
 				933945C31BBF4EA5004D823C /* ATT_Hack_2015UITests */,
@@ -104,13 +144,15 @@
 		9339459B1BBF4EA5004D823C /* ATT_Hack_2015 */ = {
 			isa = PBXGroup;
 			children = (
+				933945FD1BBF6E65004D823C /* DigitalLifeClasses */,
+				933945FE1BBF6E7B004D823C /* Helpers */,
+				933945D41BBF4EDA004D823C /* Constants.h */,
+				933945D51BBF4EDA004D823C /* Constants.m */,
+				933945DC1BBF5379004D823C /* ViewControllers */,
 				9339459F1BBF4EA5004D823C /* AppDelegate.h */,
 				933945A01BBF4EA5004D823C /* AppDelegate.m */,
-				933945A21BBF4EA5004D823C /* FirstViewController.h */,
-				933945A31BBF4EA5004D823C /* FirstViewController.m */,
-				933945A51BBF4EA5004D823C /* SecondViewController.h */,
-				933945A61BBF4EA5004D823C /* SecondViewController.m */,
 				933945A81BBF4EA5004D823C /* Main.storyboard */,
+				9339460A1BBF8DF0004D823C /* app-bits_free_tabbar_icons */,
 				933945AB1BBF4EA5004D823C /* Assets.xcassets */,
 				933945AD1BBF4EA5004D823C /* LaunchScreen.storyboard */,
 				933945B01BBF4EA5004D823C /* Info.plist */,
@@ -143,6 +185,59 @@
 				933945C61BBF4EA5004D823C /* Info.plist */,
 			);
 			path = ATT_Hack_2015UITests;
+			sourceTree = "<group>";
+		};
+		933945DC1BBF5379004D823C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				933945E81BBF5585004D823C /* VC_Home.h */,
+				933945E91BBF5585004D823C /* VC_Home.m */,
+				933945EB1BBF5590004D823C /* VC_Login.h */,
+				933945EC1BBF5590004D823C /* VC_Login.m */,
+				933945E51BBF5438004D823C /* VC_Thermostat.h */,
+				933945E61BBF5438004D823C /* VC_Thermostat.m */,
+				933945E21BBF53FC004D823C /* VC_Doors.h */,
+				933945E31BBF53FC004D823C /* VC_Doors.m */,
+				933945DF1BBF53DB004D823C /* VC_Lights.h */,
+				933945E01BBF53DB004D823C /* VC_Lights.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		933945FD1BBF6E65004D823C /* DigitalLifeClasses */ = {
+			isa = PBXGroup;
+			children = (
+				933945EE1BBF6E58004D823C /* DLClient.h */,
+				933945EF1BBF6E58004D823C /* DLClient.m */,
+				933945F01BBF6E58004D823C /* DLDevice.h */,
+				933945F11BBF6E58004D823C /* DLDevice.m */,
+				933945F21BBF6E58004D823C /* DLeServiceConnection.h */,
+				933945F31BBF6E58004D823C /* DLeServiceConnection.m */,
+			);
+			name = DigitalLifeClasses;
+			sourceTree = "<group>";
+		};
+		933945FE1BBF6E7B004D823C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				933945F41BBF6E58004D823C /* JSONHelpers.h */,
+				933945F51BBF6E58004D823C /* JSONHelpers.m */,
+				933945F61BBF6E58004D823C /* URLHelpers.h */,
+				933945F71BBF6E58004D823C /* URLHelpers.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		933946011BBF853B004D823C /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				933946021BBF86A6004D823C /* Icon_Food.jpg */,
+				933946041BBF8A90004D823C /* Icon_Contact.jpg */,
+				933946051BBF8A90004D823C /* Icon_Photo.jpg */,
+				933946061BBF8A90004D823C /* Icon_Signout.jpg */,
+				933945FF1BBF8536004D823C /* Home_Back.jpg */,
+			);
+			name = Artwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +343,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933946091BBF8A90004D823C /* Icon_Signout.jpg in Resources */,
 				933945AF1BBF4EA5004D823C /* LaunchScreen.storyboard in Resources */,
+				933946001BBF8536004D823C /* Home_Back.jpg in Resources */,
 				933945AC1BBF4EA5004D823C /* Assets.xcassets in Resources */,
+				933946071BBF8A90004D823C /* Icon_Contact.jpg in Resources */,
+				933946081BBF8A90004D823C /* Icon_Photo.jpg in Resources */,
 				933945AA1BBF4EA5004D823C /* Main.storyboard in Resources */,
+				9339460B1BBF8DF0004D823C /* app-bits_free_tabbar_icons in Resources */,
+				933946031BBF86A6004D823C /* Icon_Food.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,10 +376,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				933945A71BBF4EA5004D823C /* SecondViewController.m in Sources */,
 				933945A11BBF4EA5004D823C /* AppDelegate.m in Sources */,
-				933945A41BBF4EA5004D823C /* FirstViewController.m in Sources */,
+				933945FB1BBF6E58004D823C /* JSONHelpers.m in Sources */,
+				933945F81BBF6E58004D823C /* DLClient.m in Sources */,
+				933945E11BBF53DB004D823C /* VC_Lights.m in Sources */,
+				933945F91BBF6E58004D823C /* DLDevice.m in Sources */,
+				933945FC1BBF6E58004D823C /* URLHelpers.m in Sources */,
 				9339459E1BBF4EA5004D823C /* main.m in Sources */,
+				933945E71BBF5438004D823C /* VC_Thermostat.m in Sources */,
+				933945FA1BBF6E58004D823C /* DLeServiceConnection.m in Sources */,
+				933945D91BBF4EDA004D823C /* Constants.m in Sources */,
+				933945EA1BBF5585004D823C /* VC_Home.m in Sources */,
+				933945ED1BBF5591004D823C /* VC_Login.m in Sources */,
+				933945E41BBF53FC004D823C /* VC_Doors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ATT_Hack_2015/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.Aaron.ATT-Hack-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -429,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ATT_Hack_2015/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "self.edu.Aaron.ATT-Hack-2015";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,6 +614,7 @@
 				933945CB1BBF4EA5004D823C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		933945CC1BBF4EA5004D823C /* Build configuration list for PBXNativeTarget "ATT_Hack_2015Tests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +623,7 @@
 				933945CE1BBF4EA5004D823C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		933945CF1BBF4EA5004D823C /* Build configuration list for PBXNativeTarget "ATT_Hack_2015UITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +632,7 @@
 				933945D11BBF4EA5004D823C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
