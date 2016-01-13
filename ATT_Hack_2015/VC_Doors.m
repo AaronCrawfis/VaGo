@@ -7,6 +7,10 @@
 //
 
 #import "VC_Doors.h"
+#import "DLClient.h"
+#import "Constants.h"
+#import "DLeServiceConnection.h"
+#import "DLDevice.h"
 
 @interface VC_Doors ()
 
@@ -18,53 +22,20 @@
 {
     [super viewDidLoad];
     
-    // Get Status of Door Locks
-    self.frontDoorLocked = false;
-    self.backDoorLocked = false;
+    // Log In
+    NSLog(@"Logging In");
+    DLClient *client = [DLClient shared];
+    [client authenticateWithUsername:kSampleUsername password:kSamplePassword completion:^(BOOL success){
+        if (success)
+        {
+            NSLog(@"Logged In");
+            [self startEService];
+        }
+        else NSLog(@"Failure to Login");
+    }];
     
-    // Set Switches to Match
-    [self.frontDoorSwitch setOn:self.frontDoorLocked];
-    [self.backDoorSwitch setOn:self.backDoorLocked];
-    
-    // Get Status of Doors
-    self.frontDoorOpen = false;
-    self.backDoorOpen = false;
-    self.garageDoorOpen = false;
-    
-    // Set Text of Doors
-    // Front Door
-    if (self.frontDoorOpen) self.frontDoorLabel.textColor = [UIColor redColor];
-    else self.frontDoorLabel.textColor = [UIColor greenColor];
-    // Back Door
-    if (self.backDoorOpen) self.backDoorLabel.textColor = [UIColor redColor];
-    else self.backDoorLabel.textColor = [UIColor greenColor];
-    // Garage Door
-    if (self.garageDoorOpen)
-    {
-        self.garageDoorLabel.textColor = [UIColor redColor];
-        [self.garageDoorButton setTitle:@"Close" forState:UIControlStateNormal];
-    }
-    else
-    {
-        self.garageDoorLabel.textColor = [UIColor greenColor];
-        [self.garageDoorButton setTitle:@"Open" forState:UIControlStateNormal];
-    }
-    
-    // get Status of Windows
-    self.kitchenWindowOpen = false;
-    self.masterBedroomWindowOpen = false;
-    self.bedroomAWindowOpen = false;
-    
-    // Set Text of Windows
-    // Kitchen
-    if (self.kitchenWindowOpen) self.kitchenWindowLabel.textColor = [UIColor redColor];
-    else self.kitchenWindowLabel.textColor = [UIColor greenColor];
-    // Master Bedroom
-    if (self.masterBedroomWindowOpen) self.masterWindowLabel.textColor = [UIColor redColor];
-    else self.masterWindowLabel.textColor = [UIColor greenColor];
-    // Bedroom A
-    if (self.bedroomAWindowOpen) self.bedroomAWindowLabel.textColor = [UIColor redColor];
-    else self.bedroomAWindowLabel.textColor = [UIColor greenColor];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self
+                                                selector:@selector(loadDevices) userInfo:nil repeats:YES];
 
 }
 
@@ -74,18 +45,36 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)frontDoorSwitch:(UISwitch *)sender
 {
+    if(self.frontDoorLocked)
+    {
+        self.frontDoorLocked = false;
+        self.lockState = @"unlock";
+    }
+    else
+    {
+        self.frontDoorLocked = true;
+        self.lockState = @"lock";
+        
+    }
+    
+    for (DLDevice *lockDevice in self.doorLockDevices)
+    {
+        [[DLClient shared] updateDeviceWithDeviceID:lockDevice.deviceGuid forAction:@"lock" withValue:self.lockState completionHandler:^ (BOOL success, NSNumber *transactionID) {
+            // if there was no transaction id then the switch was already set to the value we requested, otherwise we mark the device as having a pending change on the "switch" label
+            if (transactionID && (transactionID.integerValue != -1))
+            {
+                NSLog(@"Door Switched");
+            }
+            else
+            {
+                NSLog(@"Nothing Happened");
+            }
+        }]; // End of [DLClient]
+    }
+
 }
 
 - (IBAction)backDoorSwitch:(UISwitch *)sender
@@ -94,13 +83,193 @@
 
 - (IBAction)garageDoorSwitch:(UISwitch *)sender
 {
-}
+    if(self.garageDoorOpen)
+    {
+        self.garageDoorOpen = false;
+        self.garageState = @"close";
+    }
+    else
+    {
+        self.garageDoorOpen = true;
+        self.garageState = @"open";
+        
+    }
+    
+    for (DLDevice *garageDevice in self.garageDevices)
+    {
+        [[DLClient shared] updateDeviceWithDeviceID:garageDevice.deviceGuid forAction:@"garage-door-control" withValue:self.garageState completionHandler:^ (BOOL success, NSNumber *transactionID) {
+            // if there was no transaction id then the switch was already set to the value we requested, otherwise we mark the device as having a pending change on the "switch" label
+            if (transactionID && (transactionID.integerValue != -1))
+            {
+                NSLog(@"Garage Switched");
+            }
+            else
+            {
+                NSLog(@"Nothing Happened");
+            }
+        }]; // End of [DLClient]
+    }
 
-- (IBAction)garageDoorButtonPressed:(UIButton *)sender
-{
 }
 
 #pragma mark - Functions
+
+- (void) searchDevices
+{
+    NSLog(@"Searching for Devices");
+    
+    // Add Devices
+    NSMutableArray *sensorDevices = [[NSMutableArray alloc] init];
+    NSMutableArray *lockDevices = [[NSMutableArray alloc] init];
+    NSMutableArray *garageDevices = [[NSMutableArray alloc] init];
+    NSArray *allDevices = [[DLClient shared] devices];
+    for (DLDevice *device in allDevices)
+    {
+        if (([device.deviceType isEqualToString:@"contact-sensor"] && device.attributes[@"status"] != nil))
+        {
+            NSLog(@"Contact Sensor Found");
+            [sensorDevices addObject:device];
+        }
+        else if (([device.deviceType isEqualToString:@"door-lock"] && device.attributes[@"status"] != nil))
+        {
+            NSLog(@"Lock Found");
+            [lockDevices addObject:device];
+        }
+        else if (([device.deviceType isEqualToString:@"garage-door-controller"] && device.attributes[@"status"] != nil))
+        {
+            NSLog(@"Garage Door Found");
+            [garageDevices addObject:device];
+        }
+    }
+    // Save a Copy
+    self.sensorDevices = [sensorDevices copy];
+    self.doorLockDevices = [lockDevices copy];
+    self.garageDevices = [garageDevices copy];
+    
+    // Update Text Information
+    [self setText:sensorDevices];
+    [self setSwitches:lockDevices];
+}
+
+- (void) setText:(NSArray *)devices
+{
+    for (DLDevice *device in devices)
+    {
+        if ([[device.attributes[@"name"] objectForKey:@"value"] isEqual:@"Contact Window1"])
+        {
+           if ([[device.attributes[@"contact-state"] objectForKey:@"value"] isEqual:@"closed"])
+           {
+               self.kitchenWindowOpen = false;
+               self.kitchenWindowLabel.textColor = [UIColor greenColor];
+           }
+           else self.kitchenWindowLabel.textColor = [UIColor redColor];
+        }
+        else if ([[device.attributes[@"name"] objectForKey:@"value"] isEqual:@"Contact Window2"])
+        {
+            if ([[device.attributes[@"contact-state"] objectForKey:@"value"] isEqual:@"closed"])
+            {
+                self.masterBedroomWindowOpen = false;
+                self.masterWindowLabel.textColor = [UIColor greenColor];
+            }
+            else self.masterWindowLabel.textColor = [UIColor redColor];
+        }
+        else if ([[device.attributes[@"name"] objectForKey:@"value"] isEqual:@"Contact Window3"])
+        {
+            if ([[device.attributes[@"contact-state"] objectForKey:@"value"] isEqual:@"closed"])
+            {
+                self.bedroomAWindowOpen = false;
+                self.bedroomAWindowLabel.textColor = [UIColor greenColor];
+            }
+            else self.bedroomAWindowLabel.textColor = [UIColor redColor];
+        }
+        else if ([[device.attributes[@"name"] objectForKey:@"value"] isEqual:@"Contact Door1"])
+        {
+            if ([[device.attributes[@"contact-state"] objectForKey:@"value"] isEqual:@"closed"])
+            {
+                self.frontDoorOpen = false;
+                self.frontDoorLabel.textColor = [UIColor greenColor];
+            }
+            else self.frontDoorLabel.textColor = [UIColor redColor];
+        }
+        else if ([[device.attributes[@"name"] objectForKey:@"value"] isEqual:@"Contact Door2"])
+        {
+            if ([[device.attributes[@"contact-state"] objectForKey:@"value"] isEqual:@"closed"])
+            {
+                self.backDoorOpen = false;
+                self.backDoorLabel.textColor = [UIColor greenColor];
+            }
+            else self.backDoorLabel.textColor = [UIColor redColor];
+        }
+        else if ([[device.attributes[@"name"] objectForKey:@"value"] isEqual:@"Contact Door3"])
+        {
+            if ([[device.attributes[@"contact-state"] objectForKey:@"value"] isEqual:@"closed"])
+            {
+                self.garageDoorOpen = false;
+                self.garageDoorLabel.textColor = [UIColor greenColor];
+            }
+            else self.garageDoorLabel.textColor = [UIColor redColor];
+        }
+    }
+}
+
+- (void) setSwitches:(NSArray *)devices
+{
+    for (DLDevice *device in devices)
+    {
+        if ([[device.attributes[@"name"] objectForKey:@"value"] isEqual:@"Door Lock"])
+        {
+            if ([[device.attributes[@"lock"] objectForKey:@"value"] isEqual:@"unlock"])
+            {
+                self.frontDoorLocked = false;
+                [self.frontDoorSwitch setOn:NO];
+            }
+            else
+            {
+                self.frontDoorLocked = true;
+                [self.frontDoorSwitch setOn:YES];
+            }
+        }
+        else if ([[device.attributes[@"name"] objectForKey:@"value"] isEqual:@"Garage Door Opener"])
+        {
+            if ([[device.attributes[@"garage-door-state"] objectForKey:@"value"] isEqual:@"open"])
+            {
+                self.garageDoorOpen = true;
+                [self.frontDoorSwitch setOn:NO];
+            }
+            else
+            {
+                self.garageDoorOpen = false;
+                [self.frontDoorSwitch setOn:YES];
+            }
+        }
+    }
+}
+
+
+#pragma mark - AT&T Functions
+
+- (void)startEService
+{
+    [[DLClient shared] startEServiceWithCompletion:^(BOOL success) {
+        if (success)
+        {
+            NSLog(@"eService Started");
+            [self loadDevices];
+        }
+    }];
+}
+
+- (void)loadDevices
+{
+    [[DLClient shared] loadDevicesWithCompletion:^(BOOL success, NSArray *devices) {
+        if (success)
+        {
+            NSLog(@"Devices Loaded");
+            [self searchDevices];
+        }
+    }];
+}
+
 
 
 @end

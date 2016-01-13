@@ -12,10 +12,17 @@
 
 @property int currentTemperature;
 @property int desiredTemperature;
+@property int currentMode;
 
 @property (strong, nonatomic) IBOutlet UILabel *currentTempLabel;
 @property (strong, nonatomic) IBOutlet UILabel *desiredTempLabel;
 @property (strong, nonatomic) IBOutlet UIStepper *desiredTempStepper;
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *thermostatMode;
+
 - (IBAction)desiredTempStepperChanged:(UIStepper *)sender;
+- (IBAction)thermostatModeChanged:(UISegmentedControl *)sender;
+
+@property (strong, nonatomic) NSArray *thermostatDevices;
 
 @end

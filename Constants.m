@@ -15,5 +15,6 @@ NSString * const kBaseEserviceURL = @"https://systest.digitallife.att.com/messag
 NSString * const kDelimiter = @"\"\"\"";
 
 // sample user
-NSString * const kSampleUsername = @"553474443";
+NSString * const kSampleUsername = @"553474454";
+//NSString * const kSampleUsername = @"553474443";
 NSString * const kSamplePassword = @"NO-PASSWD";

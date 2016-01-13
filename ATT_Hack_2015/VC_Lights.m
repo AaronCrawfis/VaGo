@@ -25,7 +25,7 @@
     // Log In
     NSLog(@"Logging In");
     DLClient *client = [DLClient shared];
-    [client authenticateWithUsername:@"553474443" password:@"NO-PASSWD" completion:^(BOOL success){
+    [client authenticateWithUsername:kSampleUsername password:kSamplePassword completion:^(BOOL success){
         if (success)
         {
             NSLog(@"Logged In");
@@ -33,7 +33,7 @@
         }
         else NSLog(@"Failure to Login");
     }];
-    
+
 }
 
 - (void)didReceiveMemoryWarning

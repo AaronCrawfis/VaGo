@@ -23,11 +23,12 @@
 
 @property (strong, nonatomic) IBOutlet UISwitch *frontDoorSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *backDoorSwitch;
-@property (strong, nonatomic) IBOutlet UIButton *garageDoorButton;
+@property (strong, nonatomic) IBOutlet UISwitch *garageDoorSwitch;
+
 
 - (IBAction)frontDoorSwitch:(UISwitch *)sender;
 - (IBAction)backDoorSwitch:(UISwitch *)sender;
-- (IBAction)garageDoorButtonPressed:(UIButton *)sender;
+- (IBAction)garageDoorSwitch:(UISwitch *)sender;
 
 @property (strong, nonatomic) IBOutlet UILabel *frontDoorLabel;
 @property (strong, nonatomic) IBOutlet UILabel *garageDoorLabel;
@@ -35,5 +36,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *kitchenWindowLabel;
 @property (strong, nonatomic) IBOutlet UILabel *masterWindowLabel;
 @property (strong, nonatomic) IBOutlet UILabel *bedroomAWindowLabel;
+
+@property (strong, nonatomic) NSArray *sensorDevices;
+@property (strong, nonatomic) NSArray *doorLockDevices;
+@property (strong, nonatomic) NSArray *garageDevices;
+
+@property NSString *lockState;
+@property NSString *garageState;
 
 @end

@@ -22,7 +22,10 @@
 {
     [super viewDidLoad];
 
-    
+    self.foodButton.hidden = YES;
+    self.contactButton.hidden = YES;
+    self.signoutButton.hidden = YES;
+    self.storyButton.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,7 +47,14 @@
 
 - (IBAction)signOutButtonPressed:(UIButton *)sender
 {
+    self.foodButton.hidden = YES;
+    self.contactButton.hidden = YES;
+    self.signoutButton.hidden = YES;
+    self.storyButton.hidden = YES;
+    self.logoImage.hidden = NO;
     
+    self.signInButton.hidden = NO;
+    self.subTitleText.text = @"Please Sign In:";
 }
 
 - (IBAction)signInButtonPressed:(UIButton *)sender
@@ -57,8 +67,24 @@
     [self performSegueWithIdentifier:@"loginSegue" sender:self];
 }
 
+- (IBAction)foodButtonPressed:(UIButton *)sender {
+}
+
+- (IBAction)contactButonPressed:(UIButton *)sender {
+}
+
+- (IBAction)journalButtonPressed:(UIButton *)sender {
+}
+
 -(void)didDismissVC_Login
 {
-    self.subTitleText.text = @"Yay!!";
+    self.subTitleText.text = @"Hello Aaron";
+    self.signInButton.hidden = YES;
+    self.logoImage.hidden = YES;
+    
+    self.foodButton.hidden = NO;
+    self.contactButton.hidden = NO;
+    self.signoutButton.hidden = NO;
+    self.storyButton.hidden = NO;
 }
 @end
